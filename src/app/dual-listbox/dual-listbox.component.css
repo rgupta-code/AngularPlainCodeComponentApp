@@ -1,0 +1,106 @@
+.dual-listbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listbox {
+  width: 45%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 200px; /* Set a fixed height for the listbox */
+}
+
+.search-box {
+  position: relative;
+  padding-bottom: 8px; /* Only bottom padding */
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 8px 32px 8px 8px; /* Add padding to the right for the icon */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 16px;
+  pointer-events: none; /* Prevent the icon from blocking input clicks */
+  font-size: 16px; /* Adjust the size as needed */
+  color: #007ad9; /* Set the color to blue */
+}
+
+.listbox-items {
+  flex: 1;
+  overflow-y: auto;
+  max-height: calc(100% - 56px); /* Adjust the height to account for the search box */
+}
+
+/* Style the listbox items */
+.listbox-item {
+  padding: 6px 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  user-select: none;
+}
+
+.listbox-item:hover {
+  background-color: #f0f0f0;
+}
+
+.listbox-item.selected {
+  background-color: #007ad9;
+  color: white;
+}
+
+/* Customize the scrollbar for WebKit browsers (Chrome, Safari) */
+.listbox-items::-webkit-scrollbar {
+  width: 8px; /* Adjust the width as needed */
+}
+
+.listbox-items::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+.listbox-items::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners for the scrollbar thumb */
+}
+
+.listbox-items::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb on hover */
+}
+
+/* Customize the scrollbar for Firefox */
+@-moz-document url-prefix() {
+  .listbox-items {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #888 #f1f1f1; /* Thumb color and track color */
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons button {
+  margin: 5px 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 16px;
+}

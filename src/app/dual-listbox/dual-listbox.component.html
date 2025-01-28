@@ -1,0 +1,67 @@
+<div class="dual-listbox">
+  <!-- Available Items List -->
+  <div class="listbox">
+    <div *ngIf="showSearchBox" class="search-box">
+      <input
+        type="text"
+        [(ngModel)]="availableSearchTerm"
+        (input)="filterItems('available')"
+        placeholder="Search available..."
+      />
+      <span class="search-icon">
+        <i class="fas fa-search"></i> <!-- Font Awesome magnifying glass icon -->
+      </span>
+    </div>
+    <div class="listbox-items">
+      <div
+        *ngFor="let item of availableFilteredItems"
+        class="listbox-item"
+        [class.selected]="selectedItem === item"
+        (click)="selectItem(item)"
+      >
+        {{ item.label }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Buttons to Move Items -->
+  <div class="buttons">
+    <button (click)="moveAllToSelected()">
+      <i class="fas fa-angle-double-right"></i> <!-- Font Awesome double right arrow -->
+    </button>
+    <button (click)="moveToSelected()">
+      <i class="fas fa-angle-right"></i> <!-- Font Awesome right arrow -->
+    </button>
+    <button (click)="moveToAvailable()">
+      <i class="fas fa-angle-left"></i> <!-- Font Awesome left arrow -->
+    </button>
+    <button (click)="moveAllToAvailable()">
+      <i class="fas fa-angle-double-left"></i> <!-- Font Awesome double left arrow -->
+    </button>
+  </div>
+
+  <!-- Selected Items List -->
+  <div class="listbox">
+    <div *ngIf="showSearchBox" class="search-box">
+      <input
+        type="text"
+        [(ngModel)]="selectedSearchTerm"
+        (input)="filterItems('selected')"
+        placeholder="Search selected..."
+      />
+      <span class="search-icon">
+        <i class="fas fa-search"></i> <!-- Font Awesome magnifying glass icon -->
+      </span>
+    </div>
+    <div class="listbox-items">
+      <div
+        *ngFor="let item of selectedFilteredItems"
+        class="listbox-item"
+        [class.selected]="selectedItem === item"
+        (click)="selectItem(item)"
+      >
+        {{ item.label }}
+      </div>
+    </div>
+  </div>
+</div>

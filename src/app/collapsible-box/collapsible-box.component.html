@@ -1,0 +1,9 @@
+<div class="collapsible-box">
+  <div class="header" (click)="toggleCollapse()">
+    <h2>{{ title }}</h2>
+    <i class="fas" [ngClass]="{'fa-chevron-down': isCollapsed, 'fa-chevron-up': !isCollapsed}"></i>
+  </div>
+  <div class="content" *ngIf="!isCollapsed">
+    <ng-content></ng-content>
+  </div>
+</div>

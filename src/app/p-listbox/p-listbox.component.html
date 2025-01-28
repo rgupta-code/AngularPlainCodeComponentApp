@@ -1,0 +1,26 @@
+<div class="listbox">
+  <!-- Search Box -->
+  <div *ngIf="showSearchBox" class="search-box">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (input)="filterItems()"
+      placeholder="Search..."
+    />
+    <span class="search-icon">
+      <i class="fas fa-search"></i> <!-- Font Awesome magnifying glass icon -->
+    </span>
+  </div>
+
+  <!-- Listbox Items Container -->
+  <div class="listbox-items">
+    <div
+      *ngFor="let item of filteredItems; let i = index"
+      class="listbox-item"
+      [class.selected]="isSelected(item)"
+      (click)="selectItem(item)"
+    >
+      {{ item.label }}
+    </div>
+  </div>
+</div>
