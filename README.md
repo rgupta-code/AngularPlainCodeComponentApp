@@ -1,6 +1,8 @@
-# Plain Custom Component for Angular project
+# Project for Plain Custom Components for Angular project
 
-Plain Custom Component is an Angular project that showcases custom Angular components written in plain HTML and CSS. The project currently includes a Listbox component and a Dual Listbox component. In the future, more components will be added.
+This is an Angular project that showcases custom Angular components written in plain HTML and CSS. The project currently includes a Listbox component and a Dual Listbox component. In the future, more components will be added.
+
+To see controls in action - https://rgupta-code.github.io/AngularPlainCodeComponentApp/
 
 ## Table of Contents
 
