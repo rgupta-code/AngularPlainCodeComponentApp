@@ -1,0 +1,90 @@
+/* filepath: /C:/MyFiles/MyProjects/AiComponents/AngularPlainCodeComponentApp/src/app/p-calendar/p-calendar.component.css */
+.calendar-container {
+  position: relative;
+  display: inline-block;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+  background-color: #fff;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 0.5rem;
+  padding-right: 2rem; /* Add padding to the right to make space for the icon */
+}
+
+.calendar-icon {
+  position: absolute;
+  right: 0.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.calendar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure the calendar is on top */
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+}
+
+.calendar-body {
+  padding: 0.5rem;
+}
+
+.calendar-weekdays, .calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.calendar-weekdays span {
+  font-weight: bold;
+  padding: 0.5rem 0;
+}
+
+.calendar-dates span {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.calendar-dates span:hover {
+  background-color: #f0f0f0;
+}
+
+.calendar-dates span.empty {
+  visibility: hidden;
+}
+
+.collapsible-box {
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+}
+
+.collapsible-box.expanded {
+  max-height: 500px; /* Adjust this value as needed */
+  min-height: 300px; /* Set the minimum height for expanded mode */
+}

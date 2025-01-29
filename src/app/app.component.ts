@@ -5,10 +5,11 @@ import { DualListboxComponent } from './dual-listbox/dual-listbox.component';
 import { CollapsibleBoxComponent } from './collapsible-box/collapsible-box.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { PCalendarComponent } from './p-calendar/p-calendar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule, CommonModule, PListboxComponent, DualListboxComponent, CollapsibleBoxComponent],
+  imports: [RouterOutlet, FormsModule, CommonModule, PListboxComponent, DualListboxComponent, PCalendarComponent, CollapsibleBoxComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

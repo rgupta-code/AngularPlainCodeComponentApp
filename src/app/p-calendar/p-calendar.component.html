@@ -1,0 +1,24 @@
+<!-- filepath: /C:/MyFiles/MyProjects/AiComponents/AngularPlainCodeComponentApp/src/app/p-calendar/p-calendar.component.html -->
+<div class="calendar-container">
+  <div class="input-group">
+    <input type="text" placeholder="Select Date" readonly (focus)="showCalendar = true" (click)="toggleCalendar()">
+    <span class="calendar-icon" (click)="toggleCalendar()">
+      <i class="fas fa-calendar-alt"></i>
+    </span>
+  </div>
+  <div class="calendar collapsible-box" [class.expanded]="showCalendar" *ngIf="showCalendar">
+    <div class="calendar-header">
+      <button (click)="prevMonth()">&#9664;</button>
+      <span>{{ monthNames[currentMonth] }} {{ currentYear }}</span>
+      <button (click)="nextMonth()">&#9654;</button>
+    </div>
+    <div class="calendar-body">
+      <div class="calendar-weekdays">
+        <span *ngFor="let day of weekDays">{{ day }}</span>
+      </div>
+      <div class="calendar-dates">
+        <span *ngFor="let date of dates" (click)="selectDate(date)">{{ date }}</span>
+      </div>
+    </div>
+  </div>
+</div>
