@@ -1,0 +1,18 @@
+<!-- filepath: /C:/MyFiles/MyProjects/AiComponents/AngularPlainCodeComponentApp/src/app/text-editor/text-editor.component.html -->
+<div class="text-editor-container">
+  <div class="toolbar">
+    <button (click)="execCmd('bold')" [class.active]="isActive('bold')"><b>B</b></button>
+    <button (click)="execCmd('italic')" [class.active]="isActive('italic')"><i>I</i></button>
+    <button (click)="execCmd('underline')" [class.active]="isActive('underline')"><u>U</u></button>
+    <button (click)="execCmd('foreColor', 'red')" [class.active]="isActive('foreColor', 'red')" style="color: red;">A</button>
+    <button (click)="execCmd('foreColor', 'green')" [class.active]="isActive('foreColor', 'green')" style="color: green;">A</button>
+    <button (click)="execCmd('foreColor', 'blue')" [class.active]="isActive('foreColor', 'blue')" style="color: blue;">A</button>
+    <button (click)="execCmd('insertUnorderedList')" [class.active]="isActive('insertUnorderedList')">•</button>
+    <button (click)="execCmd('insertOrderedList')" [class.active]="isActive('insertOrderedList')">1.</button>
+    <button (click)="execCmd('outdent')"><i class="fas fa-outdent"></i></button>
+    <button (click)="execCmd('indent')"><i class="fas fa-indent"></i></button>
+    <button (click)="insertImage()"><i class="fas fa-image"></i></button>
+    <!-- Add more toolbar buttons as needed -->
+  </div>
+  <div class="editor" contenteditable="true"></div>
+</div>

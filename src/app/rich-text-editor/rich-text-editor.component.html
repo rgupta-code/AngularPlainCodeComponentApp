@@ -1,0 +1,43 @@
+<!-- filepath: /C:/MyFiles/MyProjects/AiComponents/AngularPlainCodeComponentApp/src/app/rich-text-editor/rich-text-editor.component.html -->
+<div class="rich-text-editor-container">
+  <div class="toolbar">
+    <button (click)="execCmd('bold')" [class.active]="isActive('bold')" title="Bold"><b>B</b></button>
+    <button (click)="execCmd('italic')" [class.active]="isActive('italic')" title="Italic"><i>I</i></button>
+    <button (click)="execCmd('underline')" [class.active]="isActive('underline')" title="Underline"><u>U</u></button>
+    <button (click)="execCmd('strikeThrough')" [class.active]="isActive('strikeThrough')" title="Strikethrough"><s>abc</s></button>
+    <button (click)="execCmd('subscript')" [class.active]="isActive('subscript')" title="Subscript">X<sub>2</sub></button>
+    <button (click)="execCmd('superscript')" [class.active]="isActive('superscript')" title="Superscript">X<sup>2</sup></button>
+    <select #fontName (change)="execCmd('fontName', fontName.value)" title="Font">
+      <option value="Segoe UI">Segoe UI</option>
+      <option value="Arial">Arial</option>
+      <option value="Courier New">Courier New</option>
+      <option value="Georgia">Georgia</option>
+      <option value="Times New Roman">Times New Roman</option>
+      <option value="Verdana">Verdana</option>
+    </select>
+    <select #fontSize (change)="execCmd('fontSize', fontSize.value)" title="Font Size">
+      <option value="1">8pt</option>
+      <option value="2">10pt</option>
+      <option value="3" selected>12pt</option>
+      <option value="4">14pt</option>
+      <option value="5">18pt</option>
+      <option value="6">24pt</option>
+      <option value="7">36pt</option>
+    </select>
+    <button (click)="execCmd('hiliteColor', 'yellow')" [class.active]="isActive('hiliteColor', 'yellow')" title="Highlight Color"><span style="background-color: yellow;">A</span></button>
+    <input #fontColor type="color" (change)="changeFontColor(fontColor.value)" title="Font Color" value="#000000">
+    <button (click)="execCmd('outdent')" title="Decrease Indent"><i class="fas fa-outdent"></i></button>
+    <button (click)="execCmd('indent')" title="Increase Indent"><i class="fas fa-indent"></i></button>
+    <button (click)="execCmd('justifyLeft')" [class.active]="isActive('justifyLeft')" title="Align Left"><i class="fas fa-align-left"></i></button>
+    <button (click)="execCmd('justifyCenter')" [class.active]="isActive('justifyCenter')" title="Center"><i class="fas fa-align-center"></i></button>
+    <button (click)="execCmd('justifyRight')" [class.active]="isActive('justifyRight')" title="Align Right"><i class="fas fa-align-right"></i></button>
+    <button (click)="execCmd('justifyFull')" [class.active]="isActive('justifyFull')" title="Justify"><i class="fas fa-align-justify"></i></button>
+    <button (click)="execCmd('insertUnorderedList')" [class.active]="isActive('insertUnorderedList')" title="Unordered List"><i class="fas fa-list-ul"></i></button>
+    <button (click)="execCmd('insertOrderedList')" [class.active]="isActive('insertOrderedList')" title="Ordered List"><i class="fas fa-list-ol"></i></button>
+    <button (click)="execCmd('removeFormat')" title="Clear Formatting"><i class="fas fa-eraser"></i></button>
+    <button (click)="execCmd('formatBlock', 'blockquote')" title="Blockquote"><i class="fas fa-quote-right"></i></button>
+    <button (click)="insertImage()" title="Insert Image"><i class="fas fa-image"></i></button>
+    <button (click)="execCmd('insertHorizontalRule')" title="Insert Horizontal Line"><i class="fas fa-minus"></i></button>
+  </div>
+  <div #editor class="editor" contenteditable="true" (input)="updateEditorValue()"></div>
+</div>

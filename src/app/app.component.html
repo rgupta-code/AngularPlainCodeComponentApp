@@ -230,12 +230,12 @@
         
         <collapsible-box title="Listbox Component">
           <p>This is a custom listbox component that allows single or multiple selections with an optional search box.</p>
-          <my-listbox
+          <app-listbox
             [items]="listboxItems"
             (selectionChange)="selectedItems"
             [showSearchBox]="true"
             [multiSelect]="false"
-          ></my-listbox>
+          ></app-listbox>
         </collapsible-box>
         
         <collapsible-box title="Dual Listbox Component">
@@ -252,6 +252,15 @@
         <collapsible-box title="Calendar Component" *ngIf="false">
           <p>This is a custom Calendar control.</p>          
           <app-p-calendar></app-p-calendar>
+        </collapsible-box>
+        
+        <collapsible-box title="Rich text editor">
+          <p>This is a custom text editor.</p>          
+          <app-text-editor></app-text-editor>
+        </collapsible-box>
+
+        <collapsible-box title="Rich Text Editor Component">
+          <app-rich-text-editor></app-rich-text-editor>
         </collapsible-box>
               
         

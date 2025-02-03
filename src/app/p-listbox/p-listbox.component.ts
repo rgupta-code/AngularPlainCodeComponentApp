@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'; 
 
 @Component({
-  selector: 'my-listbox',
+  selector: 'app-listbox',
   imports: [FormsModule, CommonModule],
   templateUrl: './p-listbox.component.html',
   styleUrl: './p-listbox.component.css'

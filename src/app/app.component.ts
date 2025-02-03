@@ -6,10 +6,23 @@ import { CollapsibleBoxComponent } from './collapsible-box/collapsible-box.compo
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { PCalendarComponent } from './p-calendar/p-calendar.component';
+import { TextEditorComponent } from './text-editor/text-editor.component';
+import { RichTextEditorComponent } from './rich-text-editor/rich-text-editor.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule, CommonModule, PListboxComponent, DualListboxComponent, PCalendarComponent, CollapsibleBoxComponent],
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    FormsModule,
+    CommonModule,
+    PListboxComponent,
+    DualListboxComponent,
+    PCalendarComponent,
+    CollapsibleBoxComponent,
+    TextEditorComponent,
+    RichTextEditorComponent
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

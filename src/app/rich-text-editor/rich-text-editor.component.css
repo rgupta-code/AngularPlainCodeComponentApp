@@ -1,0 +1,43 @@
+/* filepath: /C:/MyFiles/MyProjects/AiComponents/AngularPlainCodeComponentApp/src/app/rich-text-editor/rich-text-editor.component.css */
+.rich-text-editor-container {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.toolbar {
+  background-color: #f5f5f5; /* Very light gray background */
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.toolbar button, .toolbar select, .toolbar input[type="color"] {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #333; /* Darker color for better contrast */
+}
+
+.toolbar input[type="color"] {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 0;
+}
+
+.toolbar button.active {
+  background-color: #d0d0d0; /* Darker gray for active state */
+}
+
+.editor {
+  padding: 1rem;
+  min-height: 200px;
+  background-color: white;
+  outline: none;
+}
