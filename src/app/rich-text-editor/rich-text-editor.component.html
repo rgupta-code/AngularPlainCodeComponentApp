@@ -38,6 +38,10 @@
     <button (click)="execCmd('formatBlock', 'blockquote')" title="Blockquote"><i class="fas fa-quote-right"></i></button>
     <button (click)="insertImage()" title="Insert Image"><i class="fas fa-image"></i></button>
     <button (click)="execCmd('insertHorizontalRule')" title="Insert Horizontal Line"><i class="fas fa-minus"></i></button>
+    <button (click)="toggleEmojiPicker()" title="Insert Emoji" class="emoji-button"><i class="fas fa-smile"></i></button>
+    <div *ngIf="showEmojiPicker" class="emoji-picker">
+      <span *ngFor="let emoji of emojis" (click)="insertEmoji(emoji)">{{ emoji }}</span>
+    </div>
   </div>
-  <div #editor class="editor" contenteditable="true" (input)="updateEditorValue()"></div>
+  <div #editor id="editor" class="editor" contenteditable="true" (click)="onEditorClick()" (keyup)="onEditorClick()" (input)="updateEditorValue()"></div>
 </div>
